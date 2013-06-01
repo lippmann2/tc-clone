@@ -1,0 +1,32 @@
+<head>
+  <title>Twitter or Chat Clone</title>
+</head>
+
+<body>
+  <div id="main_column">
+    {{> history}}
+    {{> submit}}
+  </div>
+</body>
+
+<template name="history">
+  <div>
+    {{#each posts}}
+      {{> post}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="post">
+  <div>
+    <span class="author">{{author}}</span>
+    <span class="contents">{{contents}}</span>
+  </div>
+</template>
+
+<template name="submit">
+  <div>
+    <input id="posttext" class=textarea type="text" />
+    <button name="submit" class="submit">Submit</button>
+  </div>
+</template>
